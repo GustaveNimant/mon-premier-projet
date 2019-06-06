@@ -5,11 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './appareil.component.html',
   styleUrls: ['./appareil.component.scss']
 })
+
 export class AppareilComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+    appareilName: string = 'Machine à laver';
+    
+    constructor() { }
+    
+    ngOnInit() {
+    }
+    
 }

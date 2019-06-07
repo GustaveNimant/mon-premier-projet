@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
+This project is copied from [OpenClassRooms.com] (https://openclassrooms.com/fr/courses/4668271-developpez-des-applications-web-avec-angular)
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+
+## in Root directory mon-premier-projet/ run :
+
+   `npm install`
+
+This will install the directory **node-modules/**
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

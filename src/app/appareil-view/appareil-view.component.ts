@@ -6,6 +6,7 @@ import { AppareilService } from '../services/appareil.service';
     templateUrl: './appareil-view.component.html',
     styleUrls: ['./appareil-view.component.scss']
 })
+
 export class AppareilViewComponent implements OnInit {
 
     isAuth = false;

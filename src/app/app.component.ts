@@ -31,7 +31,7 @@ export class AppComponent implements OnInit, OnDestroy {
 	);
     }
 
-    ngOnDestroy() {
+    ngOnDestroy() { /* déclenché quand le component est détruit */
 	this.counterSubscription.unsubscribe();
     }
 }

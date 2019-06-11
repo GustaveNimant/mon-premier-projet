@@ -68,9 +68,10 @@ export class AppareilService {
     saveAppareilsToServer() {
 	
 	this.httpClient
-	    .post('https://les-appareils.firebaseio.com/appareils.json', this.appareils)
+	    .put('https://les-appareils.firebaseio.com/appareils.json', this.appareils)
+	/* put : écrase le contenu . post : ajoute un nouvel enregistrement */
 	    .subscribe( /* réaction à la réponse du serveur */
-		() => {
+			() => {
 		    console.log('Enregistrement terminé !');
 		},
 		(error) => {

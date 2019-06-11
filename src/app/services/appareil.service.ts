@@ -1,4 +1,8 @@
 import { Subject } from 'rxjs/Subject';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Injectable()
 
 export class AppareilService {
 
@@ -21,7 +25,9 @@ export class AppareilService {
 	    status: 'éteint'
 	}
     ];
-    
+
+    constructor(private httpClient: HttpClient) { } /* injecté */
+
     emitAppareilSubject() { /* émet la liste des appareils */
 	this.appareilsSubject.next(this.appareils.slice());
     }
@@ -57,5 +63,20 @@ export class AppareilService {
     switchOffOne(i: number) {
 	this.appareils[i].status = 'éteint';
 	this.emitAppareilSubject();
+    }
+
+    saveAppareilsToServer() {
+	
+	this.httpClient
+	    .post('https://les-appareils.firebaseio.com/appareils.json', this.appareils)
+	    .subscribe( /* réaction à la réponse du serveur */
+		() => {
+		    console.log('Enregistrement terminé !');
+		},
+		(error) => {
+		    console.log('saveAppareilsToServer Erreur ! : ' + error);
+		}
+	    );
+	
     }
 }

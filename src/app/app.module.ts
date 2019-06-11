@@ -13,6 +13,7 @@ import { AppareilViewComponent } from './appareil-view/appareil-view.component';
 import { SingleAppareilComponent } from './single-appareil/single-appareil.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
     { path: 'appareils', canActivate:[AuthGuard], component: AppareilViewComponent },
@@ -36,6 +37,7 @@ const appRoutes: Routes = [
     imports: [
 	BrowserModule,
 	FormsModule,
+	HttpClientModule,
 	RouterModule.forRoot(appRoutes)
     ],
     providers: [AppareilService,

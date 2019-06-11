@@ -4,6 +4,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This project is copied from [OpenClassRooms.com course](https://openclassrooms.com/fr/courses/4668271-developpez-des-applications-web-avec-angular)
 
+[Structurez avec les components](https://openclassrooms.com/fr/courses/4668271-developpez-des-applications-web-avec-angular/5087065-structurez-avec-les-components)
+
+[Gérez des données dynamiques](https://openclassrooms.com/fr/courses/4668271-developpez-des-applications-web-avec-angular/5088271-gerez-des-donnees-dynamiques)
+
+[Structurez le document avec des Directives](https://openclassrooms.com/fr/courses/4668271-developpez-des-applications-web-avec-angular/5088481-structurez-le-document-avec-des-directives)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
 ## in Root directory mon-premier-projet/ run :

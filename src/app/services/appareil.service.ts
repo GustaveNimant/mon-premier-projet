@@ -66,7 +66,6 @@ export class AppareilService {
     }
 
     saveAppareilsToServer() {
-	
 	this.httpClient
 	    .put('https://les-appareils.firebaseio.com/appareils.json', this.appareils)
 	/* put : écrase le contenu . post : ajoute un nouvel enregistrement */

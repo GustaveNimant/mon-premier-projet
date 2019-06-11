@@ -78,6 +78,20 @@ export class AppareilService {
 		    console.log('saveAppareilsToServer Erreur ! : ' + error);
 		}
 	    );
-	
     }
-}
+    
+    getAppareilsFromServer() {
+	this.httpClient
+	    .get<any[]>('https://les-appareils.firebaseio.com/appareils.json')
+		.subscribe(
+		    (a_response) => {
+			this.appareils = a_response;
+			this.emitAppareilSubject();
+		    },
+		    (an_error) => {
+			console.log('getAppareilsFromServer Erreur ! : ' + an_error);
+		    }
+		);
+    }
+    
+}    

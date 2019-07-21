@@ -23,7 +23,7 @@ export class AppareilViewComponent implements OnInit {
 	);
     });
 
-    appareils : any[];
+    les_appareils : any[];
 
     constructor(private appareilService : AppareilService) {
 	setTimeout(
@@ -33,13 +33,14 @@ export class AppareilViewComponent implements OnInit {
 	);
     }
 
-    ngOnInit () { /* après constructor. avant les autre méthodes */
+    ngOnInit () { /* Après constructor. Avant les autres méthodes */
 	this.appareilSubscription = this.appareilService.appareilsSubject.subscribe(
 	    (des_appareils: any[]) => {
-		this.appareils = des_appareils;
+		this.les_appareils = des_appareils;
 	    }
 	);
-	this.appareilService.emitAppareilSubject(); /* émet la copie des appareils */
+	/* émet la copie des appareils */
+	this.appareilService.emitAppareilSubject(); 
     }
     
     onAllumer() {

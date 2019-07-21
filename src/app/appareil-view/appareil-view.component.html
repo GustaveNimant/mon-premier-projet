@@ -4,11 +4,11 @@
     <p>Mis à jour : {{ lastUpdate | async | date: 'y MMMM EEEE d' | uppercase }}</p>
 
     <ul class="list-group">
-	<app-appareil  *ngFor="let appareil of appareils; let i = index"
-		       [appareilName]="appareil.name"
-		       [appareilStatus]="appareil.status"
+	<app-appareil  *ngFor="let un_appareil of les_appareils; let i = index"
+		       [appareilName]="un_appareil.name"
+		       [appareilStatus]="un_appareil.status"
 		       [indexOfAppareil]="i" 
-		       [id]="appareil.id">
+		       [id]="un_appareil.id">
 	</app-appareil>
     </ul>
     

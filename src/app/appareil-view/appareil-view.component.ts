@@ -35,8 +35,8 @@ export class AppareilViewComponent implements OnInit {
 
     ngOnInit () { /* après constructor. avant les autre méthodes */
 	this.appareilSubscription = this.appareilService.appareilsSubject.subscribe(
-	    (an_appareils: any[]) => {
-		this.appareils = an_appareils;
+	    (des_appareils: any[]) => {
+		this.appareils = des_appareils;
 	    }
 	);
 	this.appareilService.emitAppareilSubject(); /* émet la copie des appareils */

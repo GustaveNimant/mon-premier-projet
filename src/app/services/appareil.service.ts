@@ -27,7 +27,7 @@ export class AppareilService {
 	{
 	    id: 4,
 	    name: 'Lampadaire',
-	    status: 'éteint'
+	    status: 'allumé'
 	}
     ];
 

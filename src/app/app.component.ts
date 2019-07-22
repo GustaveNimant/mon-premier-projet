@@ -17,9 +17,12 @@ export class AppComponent implements OnInit, OnDestroy {
     constructor (){}
 
     ngOnInit() {
-	const counter = Observable.interval(1000); /* http://reactivex.io/documentation/operators/interval.html */
+	console.log('Entrée dans ngOnInit');
+	/* http://reactivex.io/documentation/operators/interval.html */
+	let counter = Observable.interval(5000); 
 	this.counterSubscription = counter.subscribe(
 	    (value:number) => {
+		console.log('Dans ngOnInit value est', value);
 		this.secondes = value;
 	    },
 	    (error:any) => {

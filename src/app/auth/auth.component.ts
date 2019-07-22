@@ -12,19 +12,24 @@ export class AuthComponent implements OnInit {
 
     authStatus: boolean;
 
-    constructor(private authService: AuthService, private router: Router) { }
+    constructor(private authService: AuthService,
+		private router: Router)
+		{ }
 
     ngOnInit() {
+	console.log('Entrée dans onOnInit avec authStatus', this.authStatus);
 	this.authStatus = this.authService.isAuth;
     }
 
     onSignIn() {
-	this.authService.signIn().then( /* asynchrone Promise */
-	    () => {
-		this.authStatus = this.authService.isAuth;
-		this.router.navigate(['appareils']); /* redirection vers /appareils */
-	    }
-	);
+	console.log('Entrée dans onSingIn avec authService', this.authService);
+	this.authService.signIn()
+	    .then( /* asynchrone Promise */
+		   () => {
+		       this.authStatus = this.authService.isAuth;
+		       this.router.navigate(['appareils']); /* navigation vers /appareils */
+		   }
+	    );
     }
     
     onSignOut() {

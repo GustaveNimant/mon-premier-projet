@@ -25,7 +25,8 @@ export class AuthComponent implements OnInit {
 	console.log('Entrée dans onSingIn avec authService', this.authService);
 	this.authService.signIn()
 	    .then( /* asynchrone Promise */
-		   () => {
+		   (value) => {
+		       console.log('onSignInp value est', value);
 		       this.authStatus = this.authService.isAuth;
 		       this.router.navigate(['appareils']); /* navigation vers /appareils */
 		   }

@@ -10,7 +10,7 @@ export class AuthService {
 		setTimeout( /* fonction Javascript*/
 		    () => { /* attendre 2 secondes puis authentifier */
 			this.isAuth = true;
-			resolve(true);
+			resolve('ok'); /* output */
 		    },
 		    2000
 		);

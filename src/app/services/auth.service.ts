@@ -5,7 +5,7 @@ export class AuthService {
     signIn () {
 	console.log('Entrée dans singIn avec isAuth', this.isAuth);
 
-	let promise = new Promise(
+	let a_promise = new Promise(
 	    (resolve, reject) => {
 		setTimeout( /* fonction Javascript*/
 		    () => { /* attendre 2 secondes puis authentifier */
@@ -17,7 +17,7 @@ export class AuthService {
 	    }
 	);
 	console.log('Sortie de singIn avec isAuth', this.isAuth);
-	return promise;
+	return a_promise;
     }
 	    
     signOut () {

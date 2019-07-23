@@ -15,14 +15,21 @@
     <button class="btn btn-success"
 	    [disabled]="!isAuth"
 	    (click)="onAllumer()">Tout allumer</button>
+    &nbsp;
     <button class="btn btn-danger"
 	    [disabled]="!isAuth"
 	    (click)="onEteindre()">Tout éteindre</button>
+    &nbsp;
     <button class="btn btn-success"
 	    [disabled]="!isAuth"
 	    (click)="onSauvegarder()">Enregistrer</button>
+    &nbsp;
     <button class="btn btn-success"
 	    [disabled]="!isAuth"
 	    (click)="onRecuperer()">Récupérer les appareils</button>
+    
+    &nbsp;
+    <button class="btn btn-success"
+	    (click)="onCreer()">Créer un nouvel appareil</button>
     
 </div>

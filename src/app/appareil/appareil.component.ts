@@ -39,4 +39,8 @@ export class AppareilComponent implements OnInit {
 	this.appareilService.switchOffOne(this.indexOfAppareil);
     }
 
+    onDelete() {
+	this.appareilService.deleteOne(this.indexOfAppareil);
+    }
+
 }

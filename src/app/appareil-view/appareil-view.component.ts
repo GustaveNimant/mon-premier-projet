@@ -71,4 +71,9 @@ export class AppareilViewComponent implements OnInit {
 	console.log('Entrée dans onRecuperer');
 	this.appareilService.getAppareilsFromServer();
     }
+
+    onCreer() {
+	console.log('Entrée dans onCreer');
+	this.appareilService.getAppareilsFromServer();
+    }
 }

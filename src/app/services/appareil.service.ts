@@ -106,5 +106,21 @@ export class AppareilService {
 		    }
 		);
     }
-    
+
+    deleteOne(i: number) {
+	console.log('Entrée dans deleteOne avec i',i);
+	this.quatre_appareils.splice(i,1);
+	console.log('Dans deleteOne quatre_appareils ', this.quatre_appareils);
+        this.saveAppareilsToServer();
+	this.getAppareilsFromServer();
+    }
+
+    addOne(name:string, status:string) {
+	console.log('Entrée dans addOne');
+        
+	this.quatre_appareils.push ({id:this.quatre_appareils.length +1, name:name, status:status});
+	console.log('Dans addOne quatre_appareils ', this.quatre_appareils);
+        this.saveAppareilsToServer();
+	this.getAppareilsFromServer();
+    }
 }    

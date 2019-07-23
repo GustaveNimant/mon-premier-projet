@@ -1,0 +1,22 @@
+ <form [formGroup]="appareilForm">
+	<div class="form-group">
+	    <label for="name">Name</label>
+	    <input type="text"
+		   placeholder="Nom de l'appareil ?"
+		   id="name"
+		   formControlName="name"
+		   class="form-control">
+	</div>
+	<div class="form-group">
+	    <label for="status">Statut</label>
+	    <input type="text"
+		   placeholder="Entrer le status ..."
+		   id="status"
+		   formControlName="status"
+		   class="form-control">
+	</div>
+	<button class="btn btn-primary"
+		(click)="onSubmit()"
+		[disabled]="appareilForm.invalid">Submit</button>
+	<p class="alert-danger" *ngIf="errorMessage">{{ errorMessage }}</p>
+    </form>

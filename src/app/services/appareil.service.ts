@@ -116,7 +116,7 @@ export class AppareilService {
     }
 
     addOne(name:string, status:string) {
-	console.log('Entrée dans addOne');
+	console.log('Entrée dans addOne avec name', name, ' status', status);
         
 	this.quatre_appareils.push ({id:this.quatre_appareils.length +1, name:name, status:status});
 	console.log('Dans addOne quatre_appareils ', this.quatre_appareils);

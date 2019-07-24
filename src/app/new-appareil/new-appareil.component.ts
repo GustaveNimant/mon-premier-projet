@@ -13,6 +13,8 @@ import { Un_appareil } from '../models/Un_appareil.model';
 export class NewAppareilComponent implements OnInit {
 
     public appareilForm: FormGroup;
+    name: string = 'Appareil';
+    status: string = 'Statut';
 
     constructor(private formBuilder: FormBuilder,
 		private appareilService: AppareilService,
@@ -29,10 +31,10 @@ export class NewAppareilComponent implements OnInit {
 
     onSubmit() {
 //	const appareil = new Un_appareil();
-	const name = this.appareilForm.get('name').value;
-	const status = this.appareilForm.get('status').value;
-	console.log('Dans onSubmit name',name,' status', status);
-	this.appareilService.addOne(name, status);
+	this.name = this.appareilForm.get('name').value;
+	this.status = this.appareilForm.get('status').value;
+	console.log('Dans onSubmit name', this.name,' status', this.status);
+	this.appareilService.addOne(this.name, this.status);
 	this.router.navigate(['/']);
     }
 }

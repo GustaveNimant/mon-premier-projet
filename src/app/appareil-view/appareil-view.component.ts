@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppareilService } from '../services/appareil.service';
 import { Subscription } from 'rxjs/Subscription';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-appareil-view',
@@ -27,7 +28,8 @@ export class AppareilViewComponent implements OnInit {
 
     les_appareils : any[];
 
-    constructor(private appareilService : AppareilService) {
+    constructor(private appareilService : AppareilService,
+		private router: Router) {
 	console.log('Entrée dans constructor');
 	setTimeout(
 	    () => {
@@ -74,6 +76,6 @@ export class AppareilViewComponent implements OnInit {
 
     onCreer() {
 	console.log('Entrée dans onCreer');
-	this.appareilService.getAppareilsFromServer();
+	this.router.navigate(['/new-appareil']);
     }
 }

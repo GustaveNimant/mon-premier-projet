@@ -1,8 +1,8 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Un_appareil } from '../models/Un_appareil.model';
 import { AppareilService } from '../services/appareil.service';
-import { Router } from '@angular/router';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Un_appareil } from '../models/Un_appareil.model';
 
 @Component({
     selector: 'app-new-appareil',
@@ -17,7 +17,7 @@ export class NewAppareilComponent implements OnInit {
     constructor(private formBuilder: FormBuilder,
 		private appareilService: AppareilService,
 		private router: Router
-    ){}
+    ){};
 
     ngOnInit() {
         this.appareilForm = this.formBuilder.group({
@@ -25,14 +25,14 @@ export class NewAppareilComponent implements OnInit {
             name: [null, Validators.required],
             status: [null, Validators.required]
         });
-
     }
 
     onSubmit() {
-	const appareil = new Un_appareil();
-	appareil.name = this.appareilForm.get('name').value;
-	appareil.status = this.appareilForm.get('status').value;
-
-	this.appareilService.addOne(appareil.name, appareil.status)
+//	const appareil = new Un_appareil();
+	const name = this.appareilForm.get('name').value;
+	const status = this.appareilForm.get('status').value;
+	console.log('Dans onSubmit name',name,' status', status);
+	this.appareilService.addOne(name, status);
+	this.router.navigate(['/']);
     }
 }
